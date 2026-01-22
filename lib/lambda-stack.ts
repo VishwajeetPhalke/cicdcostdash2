@@ -12,7 +12,7 @@ export class lambdaStack extends cdk.Stack {
       handler: 'index.handler',
       code: lambda.Code.fromInline(`
         exports.handler = async (event) => {
-          console.log("Hello from inline Lambda (env:", process.env.ENV, ")");
+          console.log("Hello from inline Lambda Vishwajeet (env:", process.env.ENV, ")");
           return { statusCode: 200, body: "Hello from inline Lambda" };
         };
       `),
