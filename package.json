@@ -1,38 +1,24 @@
 
 {
-  "name": "cicdmanual",
+  "name": "cicd-security-pipelines",
   "version": "0.1.0",
-  "private": true,
   "bin": {
-    "cicdmanual": "bin/cicdmanual.js"
+    "cdk": "bin/cicd-app.js"
   },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "jest",
     "cdk": "cdk",
-    "bootstrap": "cdk bootstrap",
     "synth": "cdk synth",
-    "diff": "cdk diff",
-    "deploy:test": "cdk deploy CicdTestPipelineStack",
-    "deploy:prod": "cdk deploy CicdProdPipelineStack",
-    "destroy:test": "cdk destroy CicdTestPipelineStack",
-    "destroy:prod": "cdk destroy CicdProdPipelineStack"
-  },
-  "engines": {
-    "node": ">=18.18.0"
-  },
-  "dependencies": {
-    "aws-cdk-lib": "^2.232.2",
-    "constructs": "^10.3.0"
+    "deploy-test": "cdk deploy CicdTestPipelineStack",
+    "deploy-prod": "cdk deploy CicdProdPipelineStack"
   },
   "devDependencies": {
-    "@types/jest": "^30",
-    "@types/node": "^24.10.1",
-    "aws-cdk": "^2.232.2",
-    "jest": "^30",
-    "ts-jest": "^29",
+    "aws-cdk-lib": "^2.132.0",
+    "constructs": "^10.3.0",
+    "cdk-nag": "^2.27.132",
+    "typescript": "^5.4.5",
     "ts-node": "^10.9.2",
-    "typescript": "~5.9.3"
+    "source-map-support": "^0.5.21"
   }
 }
